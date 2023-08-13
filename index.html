@@ -10,24 +10,24 @@
 
 <body onload="onInit()">
     <main id="app">
-        <div class="seat" style="position:absolute; left: 1em; top:1em; cursor: default;">
-            <span style="margin-left:2.5em;">Available</span>
+        <div class="seat seat-info available">
+            <span class="seat-label">Available</span>
         </div>
-        <div class="seat temporary" style="position:absolute; left: 1em; top:4.5em; cursor: default;">
-            <span style="margin-left:2.5em;">Selected</span>
+        <div class="seat seat-info temporary">
+            <span class="seat-label">Selected</span>
         </div>
-        <div class="seat reserved" style="position:absolute; left: 1em; top:8em; cursor: default;">
-            <span style="margin-left:2.5em;">Reserved</span>
+        <div class="seat seat-info reserved">
+            <span class="seat-label">Reserved</span>
         </div>
         <div class="screen">
             <h2>Cinema Seat Booking</h2>
         </div>
-        <div class="theatre" id="theatre">
+        <div class="theatre">
             <!-- SEATS -->
         </div>
-        <div id="modal" class="modal">
-            Seat: <span class="seatNum"></span><br>
-            Price: <span class="seatPrice"></span><br>
+        <div class="modal">
+            Seat: <span class="seat-num"></span><br>
+            Price: <span class="seat-price"></span><br>
             <button onclick="bookSeat()">BOOK</button>
         </div>
     </main>

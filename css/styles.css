@@ -42,7 +42,7 @@ h2 {
     align-items: center;
 }
 
-.seatRow {
+.seat-row {
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
@@ -80,7 +80,30 @@ h2 {
 
 .seat.reserved {
     filter: saturate(0);
-    cursor:not-allowed;
+    cursor: not-allowed;
+}
+
+.seat-info {
+    position: absolute;
+    cursor: default;
+    left: 1em;
+}
+
+.seat-info.available {
+    top: 1em;
+}
+
+.seat-info.temporary {
+    top: 4.5em;
+}
+
+.seat-info.reserved {
+    top: 8em;
+    cursor: default;
+}
+
+.seat-label {
+    margin-left: 2.5em;
 }
 
 .modal {
@@ -99,7 +122,7 @@ h2 {
     max-width: 500px;
 }
 
-.modal .seatNum {
+.modal .seat-mum {
     margin-bottom: 10em;
 }
 
