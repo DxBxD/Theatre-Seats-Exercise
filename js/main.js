@@ -9,7 +9,7 @@ const modal = document.querySelector('.modal')
 let selectedSeat
 let timeout
 
-const reservedSeats = JSON.parse(localStorage.getItem('reservedSeats') || '{}')
+const reservedSeats = JSON.parse(localStorage.getItem('reservedSeats')) || { '5-0': true, '0-2': true, '0-12': true, '0-11': true, '0-7': true, '3-0': true, '4-0': true, '0-0': true }
 
 function onInit() {
     renderSeats()
@@ -29,6 +29,7 @@ function renderSeats() {
             if (reservedSeats[`${i}-${j}`]) {
                 seat.classList.add('reserved')
             }
+            seat.title = `Row: ${i + 1}, Seat: ${j + 1}`
             seat.addEventListener('click', (e) => {
                 e.stopPropagation()
                 handleSeatClick(i, j)
